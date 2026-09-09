@@ -1,0 +1,75 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+  color: #222;
+}
+.container {
+  width: min(900px, 92%);
+  margin: 40px auto;
+}
+h1 { margin-bottom: 5px; }
+.subtitle { color: #666; }
+.summary {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin: 25px 0;
+}
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px #0001;
+}
+.card span { display: block; color: #666; margin-bottom: 8px; }
+.card strong { font-size: 28px; }
+.form {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr auto;
+  gap: 10px;
+  box-shadow: 0 2px 10px #0001;
+}
+input, select, button {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+}
+button {
+  background: #198754;
+  color: white;
+  border: 0;
+  cursor: pointer;
+}
+button:hover { opacity: .9; }
+h2 { margin-top: 30px; }
+#expenseList { list-style: none; padding: 0; }
+.expense {
+  background: white;
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px #0001;
+}
+.info strong { display: block; }
+.info small { color: #777; }
+.right { display: flex; gap: 12px; align-items: center; }
+.delete {
+  background: #dc3545;
+  padding: 8px 10px;
+}
+.empty { color: #777; padding: 10px 0; }
+
+@media (max-width: 750px) {
+  .form { grid-template-columns: 1fr; }
+  .summary { grid-template-columns: 1fr; }
+  .expense { gap: 10px; }
+}
